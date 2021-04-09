@@ -6,9 +6,25 @@ import SocialC from "../assests/social/socialC.svg";
 import Logo from "../assests/logo.svg";
 import Arrow from "../assests/arrowDown.svg";
 import Geo from "../assests/geography.svg";
+import { Button } from "@material-ui/core";
 
-const Nav = () => {
+
+const Foot = (props) => {
+  let colorCheck='';
+  if(props.color==='black')
+  {
+    colorCheck={backgroundColor:'#000000'};
+  }
+
+ 
   return (
+    <>
+    <div className={Footer.banner} style={{...colorCheck}}>
+      <p className={Footer.title}>We operate 40,000 <br/>
+We give them an office.</p>
+<Button variant="contained" size="large" className={Footer.clrBtn}>Schedule a free tour</Button>
+
+    </div>
       <div className={'containerside '+Footer.main}>
     <div className={Footer.container}>
       <div className={Footer.left}>
@@ -81,6 +97,7 @@ const Nav = () => {
     </div>
     <p className={Footer.small}>© Copyright 2021 McKinley & Rice, Inc. All rights reserved. Various trademarks held by their respective owners.</p>
     </div>
+    </>
   );
 };
-export default Nav;
+export default Foot;

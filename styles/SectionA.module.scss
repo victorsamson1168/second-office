@@ -1,0 +1,62 @@
+.heightContainer
+{
+  height: auto;
+.subContainer {
+  margin-top: 83px;
+  margin-bottom: 112px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .left {
+    .clrBtn {
+      color: white;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: center;
+      text-transform: none;
+      background: linear-gradient(92.12deg, #07c6ba -1.48%, #cb59f5 98.21%);
+      height: 46.66558837890625px;
+      width: 270px;
+      border-radius: 8px;
+    }
+    width: 635px;
+    p {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+    .titleLocal {
+      margin-bottom: 30px;
+    }
+    .sub {
+      margin-bottom: 30px;
+    }
+  }
+  .right {
+    .image {
+      width: 400px;
+      height: 400px;
+      margin-left: 20px;
+      background: #7e7e7e;
+    }
+  }
+}
+.container{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+}
+}

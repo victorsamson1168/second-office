@@ -11,8 +11,54 @@
     
   }
 }
+.black{
+  background: #000000;
+}
+
+.banner{
+  
+  width: 100%;
+  height: 330px;
+  margin-bottom: 60px;
+  background: #353535;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .title{
+    font-family: Poppins;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 44px;
+letter-spacing: 0em;
+text-align: center;
+color: white;
+margin: 75px auto 55px;
+  }
+  .clrBtn {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 74.33px;
+    color: white;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: none;
+    background: linear-gradient(92.12deg, #07c6ba -1.48%, #cb59f5 98.21%);
+    height: 46.66558837890625px;
+    width: 270px;
+    border-radius: 8px;
+  }
+
+}
 .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   .left {
@@ -48,6 +94,7 @@
       font-weight: 700;
       color: #000000;
       margin-bottom: 25px;
+      margin-top: 0px;
     }
     .product {
       margin-right: 70px;
