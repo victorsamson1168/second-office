@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div>
       <Nav></Nav>
-      <Nav color='black'></Nav>
+      {/* <Nav color='black'></Nav> */}
       <SectionA></SectionA>
       <Footer></Footer>
-      <Footer color='black'></Footer>
+      {/* <Footer color='black'></Footer> */}
       
       {/* <BlogCard/> */}
 

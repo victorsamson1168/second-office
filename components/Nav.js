@@ -5,10 +5,17 @@ import Button from "@material-ui/core/Button";
 import Select from "@material-ui/core/Select";
 import Arrow from "../assests/arrowDown.svg"
 import Drop from "../components/DropDown"
+import Chip from '@material-ui/core/Chip';
+import DropDownStyle from "../styles/DropDownNavElement.module.scss"
+
+
 
 
 const Nav = (props) => {
-  const company = ["about", "news", "careers"];
+  let company = [<p>about</p>,<p>news</p>,<p>careers</p>];
+  let resources=[<p>Blogs</p>,<p>Software Engineering Team Structure Analyzer™ <span><Chip className={DropDownStyle.chip} size="small" label="New" /></span></p>];
+
+
   let logoColor=<Logo />;
   let parentContainer=Navbar.none;
   let navBarlinks=Navbar.links;
@@ -31,10 +38,9 @@ const Nav = (props) => {
       <div className={navBarlinks}>
         <p>How it works</p>
         <p>Pricing</p>
-        <p>Resources</p>
-        <p>Company</p>
-        <Drop/>
-        
+        <Drop listItems={resources} className={Navbar.drop}>Resources</Drop>
+        <Drop  listItems={company} className={Navbar.drop}>Company</Drop>        
+
         <Button variant="contained" size="large" className={Navbar.btn}>
           Book a call
         </Button>

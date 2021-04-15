@@ -8,17 +8,18 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 import Arrow from "../assests/arrowDown.svg"
+import DropDownStyle from "../styles/DropDownNavElement.module.scss"
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
   },
   paper: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(90),
   },
 }));
 
-export default function MenuListComposition() {
+export default function MenuListComposition(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const anchorRef = React.useRef(null);
@@ -52,16 +53,27 @@ export default function MenuListComposition() {
     prevOpen.current = open;
   }, [open]);
 
+
+  const genrateList=()=>
+  {
+    return props.listItems.map((item)=>{
+      return(<MenuItem onClick={handleClose} className={DropDownStyle.menuItem}>{item}</MenuItem>);
+    })
+
+  }
+
   return (
     <div className={classes.root}>
       
-      <div>
-        <Button
+      <div className={DropDownStyle.inner}>
+        <Button  className={DropDownStyle.btn}
           ref={anchorRef}
           aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
-        >jhvhjbkuj<Arrow/>
+          disableRipple={true}
+        >{props.children}
+        <Arrow className={DropDownStyle.arrow}/>
         </Button>
         <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
           {({ TransitionProps, placement }) => (
@@ -69,12 +81,13 @@ export default function MenuListComposition() {
               {...TransitionProps}
               style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
             >
-              <Paper>
+              <Paper className={DropDownStyle.paper}>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                    {/* <MenuItem onClick={handleClose}>Profile</MenuItem> */}
+                    {
+                      genrateList()
+                    }
                   </MenuList>
                 </ClickAwayListener>
               </Paper>
