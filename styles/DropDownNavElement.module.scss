@@ -1,5 +1,9 @@
 .inner {
+  // margin-left: 20px;
+
   .btn {
+    
+    margin:0px 10px;
     
     font-family: Inter;
     font-size: 16px;
@@ -13,6 +17,9 @@
     .arrow {
       margin-left: 10px;
     }
+  }
+  .whiteBtn{
+    color: white;
   }
   &:hover {
     background-color:  rgba(0, 0, 0, 0);
@@ -31,4 +38,7 @@
       }
     }
   }
+}
+.inner>div{
+  z-index: 2;
 }

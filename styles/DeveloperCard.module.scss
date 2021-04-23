@@ -1,0 +1,46 @@
+.CardContainer {
+  height: auto;
+  min-width: 410px;
+  display: flex;
+  flex-direction: row;
+
+  .avatar {
+    border-radius: 5px;
+    
+  }
+  .detailsContainer {
+    margin-left: 20px;
+    .name {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #FFFFFF;
+
+    }
+    .designation {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #FFFFFF;
+    }
+    .previous {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #616161;
+
+    }
+  }
+}

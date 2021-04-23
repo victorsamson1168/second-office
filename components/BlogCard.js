@@ -1,5 +1,6 @@
 import Card from "../styles/Blogcard.module.scss";
 
+
 const BlogCard = (props) => {
   return (
       <div className={Card.container}>

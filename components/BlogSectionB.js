@@ -16,9 +16,9 @@
               </h1>
               <p className={Sec.sub}>
                 20,000+ overseas software engineers, ready to be seated in
-                <br /> an
+                 an
                 office.
-                 Accountability meets remote teams. 20,000+ <br />overseas
+                 Accountability meets remote teams. 20,000+ overseas
                 software engineers.
               </p>
               <Button variant="contained" size="large" className={Sec.clrBtn}>

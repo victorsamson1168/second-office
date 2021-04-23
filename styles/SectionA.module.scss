@@ -1,3 +1,5 @@
+$tablet_brkpoint: 1280px;
+
 .heightContainer
 {
   height: auto;
@@ -10,6 +12,10 @@
   justify-content: space-between;
 
   .left {
+    display: flex;
+    flex-direction: column;    
+    width: 635px;
+
     .clrBtn {
       color: white;
       font-family: Inter;
@@ -25,7 +31,6 @@
       width: 270px;
       border-radius: 8px;
     }
-    width: 635px;
     p {
       font-family: Inter;
       font-size: 16px;
@@ -45,6 +50,7 @@
   .right {
     .image {
       width: 400px;
+      max-width: 400px;
       height: 400px;
       margin-left: 20px;
       background: #7e7e7e;
@@ -59,4 +65,28 @@
   justify-content: center;
   height: auto;
 }
+}
+@media screen and (max-device-width: $tablet_brkpoint) {
+ .heightContainer{
+   padding-bottom: 40px;
+   .subContainer{
+     margin-top: 0px;
+     justify-content: center;
+     .left{
+       align-items: center;
+       h1{
+         text-align: center;
+       } 
+       p{
+        text-align: center;
+       }      
+     }
+     .right{
+       .image{
+         margin: 10px;
+       }
+       margin-top: 50px;
+     }
+   }
+ }
 }

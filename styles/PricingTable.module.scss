@@ -1,0 +1,67 @@
+.container {
+  background-color: #ededed;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    margin-top: 105px;
+    margin-bottom: 70px;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  .tableContainer{
+    overflow-x: auto;
+  table {
+    border-collapse: collapse;
+    margin-bottom: 80px;
+    width: 100%;
+    border: 0px;
+    .normalHeading {
+      text-align: left;
+    }
+    .specialHeading {
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 0em;
+    }
+    td,
+    th {
+      padding: 15px;
+      border-bottom: 0.5px solid #afafaf;
+      text-align: center;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+    }
+    .features {
+      text-align: left;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 19px;
+      letter-spacing: 0em;
+
+      .subheading {
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+      }
+    }
+  }
+}
+}

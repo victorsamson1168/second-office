@@ -3,6 +3,7 @@ import Sec from "../styles/SectionA.module.scss";
 import Advertisment from "./Advertisement";
 import Kinfolk from "../assests/company/Kinfolk.svg";
 import Citibank from "../assests/company/citibank.svg";
+import Image from "next/image";
 
 const SectionA = () => {
   let companies = [

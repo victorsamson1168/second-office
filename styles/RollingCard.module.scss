@@ -1,0 +1,41 @@
+$tablet_brkpoint: 1280px;
+
+.cardContainer {
+  max-width: 385px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #616161;
+  margin: 55px 10px;
+  
+
+  .innerText {
+      margin: auto;
+      padding: 25px;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+
+    .number {
+        color: #07C6BA;
+
+      font-family: Inter;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
+  }
+}
+@media screen and (max-device-width: $tablet_brkpoint) {
+  .cardContainer{
+    margin: 15px 10px;
+  }
+  
+}

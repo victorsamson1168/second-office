@@ -1,0 +1,62 @@
+.testimonialContainer {
+  background-color: #353535;
+  min-height: 250px;
+  color: white;
+  padding: 20px;
+  height: auto;
+  width: 60vw;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .userDetails {
+    width: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+    .avatar {
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+    .userData {
+      margin: 5px;
+      display: flex;
+      flex-direction: column;
+      .name {
+        margin: 5px;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .designation {
+        margin: 5px;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+  }
+  .review {
+      margin: auto;
+      max-width: 557px;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+}

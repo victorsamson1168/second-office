@@ -1,18 +1,19 @@
-import React from 'react';
-import Button from '@material-ui/core/Button';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
-import Grow from '@material-ui/core/Grow';
-import Paper from '@material-ui/core/Paper';
-import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
-import { makeStyles } from '@material-ui/core/styles';
-import Arrow from "../assests/arrowDown.svg"
-import DropDownStyle from "../styles/DropDownNavElement.module.scss"
+import React from "react";
+import Button from "@material-ui/core/Button";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import Grow from "@material-ui/core/Grow";
+import Paper from "@material-ui/core/Paper";
+import Popper from "@material-ui/core/Popper";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuList from "@material-ui/core/MenuList";
+import { makeStyles } from "@material-ui/core/styles";
+import Arrow from "../assests/arrowDown.svg";
+import ArrowWhite from "../assests/whiteArrow.svg";
+import DropDownStyle from "../styles/DropDownNavElement.module.scss";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   paper: {
     marginRight: theme.spacing(90),
@@ -37,7 +38,7 @@ export default function MenuListComposition(props) {
   };
 
   function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
+    if (event.key === "Tab") {
       event.preventDefault();
       setOpen(false);
     }
@@ -53,41 +54,60 @@ export default function MenuListComposition(props) {
     prevOpen.current = open;
   }, [open]);
 
-
-  const genrateList=()=>
-  {
-    return props.listItems.map((item)=>{
-      return(<MenuItem onClick={handleClose} className={DropDownStyle.menuItem}>{item}</MenuItem>);
-    })
-
+  const genrateList = () => {
+    return props.listItems.map((item) => {
+      return (
+        <MenuItem onClick={handleClose} className={DropDownStyle.menuItem}>
+          {item}
+        </MenuItem>
+      );
+    });
+  };
+  let arrow = <Arrow className={DropDownStyle.arrow} width={10} height={5} />;
+  let btnColorStyle = DropDownStyle.btn;
+  if (props.color === "black") {
+    arrow = <ArrowWhite className={DropDownStyle.arrow}  />;
+    btnColorStyle += " " + DropDownStyle.whiteBtn;
   }
 
   return (
     <div className={classes.root}>
-      
       <div className={DropDownStyle.inner}>
-        <Button  className={DropDownStyle.btn}
+        <Button
+          className={btnColorStyle}
           ref={anchorRef}
-          aria-controls={open ? 'menu-list-grow' : undefined}
+          aria-controls={open ? "menu-list-grow" : undefined}
           aria-haspopup="true"
           onClick={handleToggle}
-          disableRipple={true}
-        >{props.children}
-        <Arrow className={DropDownStyle.arrow}/>
+          disableRipple={false}
+        >
+          {props.children}
+          {arrow}
         </Button>
-        <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+        <Popper
+          open={open}
+          anchorEl={anchorRef.current}
+          role={undefined}
+          transition
+          disablePortal
+        >
           {({ TransitionProps, placement }) => (
             <Grow
               {...TransitionProps}
-              style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+              style={{
+                transformOrigin:
+                  placement === "bottom" ? "center top" : "center bottom",
+              }}
             >
               <Paper className={DropDownStyle.paper}>
                 <ClickAwayListener onClickAway={handleClose}>
-                  <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown}>
+                  <MenuList
+                    autoFocusItem={open}
+                    id="menu-list-grow"
+                    onKeyDown={handleListKeyDown}
+                  >
                     {/* <MenuItem onClick={handleClose}>Profile</MenuItem> */}
-                    {
-                      genrateList()
-                    }
+                    {genrateList()}
                   </MenuList>
                 </ClickAwayListener>
               </Paper>

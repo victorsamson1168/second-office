@@ -11,6 +11,12 @@ body {
 .containerside {
   margin: 0px 135px;
 }
+@media only screen and (max-device-width: 1180px) {
+  .containerside {
+    margin: 0px 15px;
+  }
+}
+
 
 .title {
   font-family: Poppins;
