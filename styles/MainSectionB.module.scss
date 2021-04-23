@@ -1,0 +1,62 @@
+$tablet_brkpoint: 1180px;
+
+.mainContainer {
+  background: #ededed;
+  padding-top: 105px;
+  padding-bottom: 80px;
+
+  .parentFlexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .left {
+      .img {
+
+      }
+    }
+    .right {
+      margin-left: 65px;
+      display: flex;
+      flex-direction: column;
+      max-width: 610px;
+      .title {
+        margin-left: 15px;
+        font-family: Poppins;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 42px;
+        letter-spacing: 0em;
+        text-align: left;
+        .highlighted {
+          background-color: #07c6ba;
+          color: white;
+          border-radius: 5px;
+          padding: 0px 3px;
+        }
+        .changeColor {
+          color: #07c6ba;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-device-width: $tablet_brkpoint) {
+  .mainContainer {
+    .parentFlexContainer {
+      .left {
+          margin-bottom: 70px;
+        .img {
+        }
+      }
+      .right {
+        margin-left: 0px;
+        .title {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+}

@@ -43,7 +43,8 @@ const SectionA = () => {
               </Button>
             </div>
             <div className={Sec.right}>
-              <div className={Sec.image}></div>
+              <Image className={Sec.image} src="https://source.unsplash.com/400x400/?office" width={400} height={400} layout="intrinsic"></Image>
+
             </div>
           </div>
           <div className={Sec.container}>{returnComonentList()}</div>

@@ -1,9 +1,17 @@
 import chatcomponentStyle from "../styles/chatcomponent.module.scss";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 function chatcomponent() {
+  useEffect(() => {
+    AOS.init({
+    });
+  }, []);
+
   return (
     <div className={chatcomponentStyle.container}>
-      <div className={chatcomponentStyle.topHeadingContainer}>
+      <div className={chatcomponentStyle.topHeadingContainer} data-aos="fade-down" data-aos-duration="700">
         <div className={chatcomponentStyle.heading}>
           <p className={chatcomponentStyle.para}>You</p>
         </div>
@@ -12,7 +20,7 @@ function chatcomponent() {
         </div>
       </div>
       <div className={chatcomponentStyle.rowContainer}>
-        <div className={chatcomponentStyle.chatcontainer}>
+        <div className={chatcomponentStyle.chatcontainer} data-aos="fade-down" data-aos-duration="1500">
           <span>Decide the tech stack.</span>
         </div>
         <Image
@@ -20,12 +28,14 @@ function chatcomponent() {
           layout="intrinsic"
           width={173}
           height={49}
-          className={chatcomponentStyle.arro}
+          className={chatcomponentStyle.arrow}
         ></Image>
       </div>
       <div className={chatcomponentStyle.rowContainer}>
         <div
           className={`${chatcomponentStyle.chatcontainer} ${chatcomponentStyle.floatRight}`}
+          data-aos="fade-up"
+          data-aos-duration="1500"
         >
           <span>
             Sends you screened resumes from across India for you to interview.
@@ -34,13 +44,15 @@ function chatcomponent() {
         </div>
       </div>
       <div className={chatcomponentStyle.rowContainer}>
-        <div className={chatcomponentStyle.chatcontainer}>
+        <div className={chatcomponentStyle.chatcontainer} data-aos="fade-down" data-aos-duration="1500">
           <span>Work with your employees at your new Second Office.</span>
         </div>
       </div>
       <div className={chatcomponentStyle.rowContainer}>
         <div
           className={`${chatcomponentStyle.chatcontainer} ${chatcomponentStyle.floatRight}`}
+          data-aos="fade-up"
+          data-aos-duration="1500"
         >
           <span>
             Takes care of employee attendance and basically all business
